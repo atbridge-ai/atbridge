@@ -10,8 +10,8 @@ atbridge turns Thunderbird into one AI-driven workspace for **emails, calendars,
 
 - **🔒 Private & local-first.** Everything runs on your machine. Your messages and API keys never route through atbridge's servers — a model only ever receives what you choose to send it.
 - **🤖 Any AI, no lock-in.** 12 providers, including a fully private local model via Ollama (see below).
-- **🖥️ Three surfaces, one binary.** The built-in @bridge panel in Thunderbird, an MCP server for AI clients and IDEs, and a CLI for scripts and CI.
-- **📝 @bridge Notes.** A local markdown workspace with linked notes and voice memos the AI can read and write.
+- **🖥️ Three surfaces, one binary.** The built-in atbridge panel in Thunderbird, an MCP server for AI clients and IDEs, and a CLI for scripts and CI.
+- **📝 atbridge Notes.** A local markdown workspace with linked notes and voice memos the AI can read and write.
 - **⚡ Measurably leaner.** Because it talks to Thunderbird locally instead of proxying your mailbox through a cloud, it's **~20× faster per operation** and **3.5× cheaper per fetch** (72% fewer input tokens) than a cloud Gmail MCP bridge. [Methodology →](https://atbridge.ai/docs/architecture/why-fast-and-cheap)
 
 ## Use atbridge as an MCP server
@@ -36,7 +36,7 @@ Full machine-readable tool reference: [llms-mcp.txt](https://atbridge.ai/llms-mc
 
 OpenAI · Anthropic Claude · Google Gemini · Mistral · DeepSeek · Moonshot Kimi · xAI Grok · Groq · OpenRouter · NVIDIA · any OpenAI-compatible endpoint · **Ollama** (fully local, private).
 
-You can also drive the in-Thunderbird @bridge chat with an AI CLI you already have — Claude Code, OpenAI Codex, or Antigravity — using your existing subscription (BYO compute, no API key).
+You can also drive the in-Thunderbird atbridge chat with an AI CLI you already have — Claude Code, OpenAI Codex, or Antigravity — using your existing subscription (BYO compute, no API key).
 
 ## Install
 
@@ -52,7 +52,7 @@ Then install the native bridge into Thunderbird: `atbridge bridge install`. Full
 
 ## Three ways to use it
 
-- **Inside Thunderbird** — the @bridge AI Chat panel, branded HTML email compose, deterministic Skills, and @bridge Notes.
+- **Inside Thunderbird** — the atbridge AI Chat panel, branded HTML email compose, deterministic Skills, and atbridge Notes.
 - **Over MCP** — Claude Desktop, Cursor, VS Code, JetBrains, Antigravity, or your own agents. No Thunderbird UI required once the bridge is installed.
 - **From the CLI** — every operation scriptable for shell, cron, and CI.
 

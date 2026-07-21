@@ -12,9 +12,9 @@ atbridge is live at [atbridge.ai](https://atbridge.ai).
 - **Any AI, no lock-in** — 12 providers: Anthropic Claude, OpenAI GPT, Google
   Gemini, Mistral, DeepSeek, Moonshot Kimi, xAI Grok, Groq, OpenRouter, NVIDIA,
   any OpenAI-compatible endpoint, or a fully private local model via Ollama.
-- **Three surfaces** — the built-in @bridge chat panel in Thunderbird, an MCP
+- **Three surfaces** — the built-in atbridge chat panel in Thunderbird, an MCP
   server for AI clients & IDEs (Claude Desktop, Cursor, …), and a CLI for scripts.
-- **@bridge Notes** — a local markdown workspace with linked notes and voice
+- **atbridge Notes** — a local markdown workspace with linked notes and voice
   memos the AI can read from and write to.
 - **Private & local-first** — runs on your machine; your mail and API keys never
   route through atbridge's servers.
