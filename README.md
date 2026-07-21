@@ -21,7 +21,7 @@ atbridge exposes its mail / calendar / contacts / notes / tasks operations as MC
 ```json
 {
   "mcpServers": {
-    "atbridge": { "command": "atbridge", "args": ["mcp"] }
+    "atbridge.ai": { "command": "atbridge", "args": ["mcp"] }
   }
 }
 ```

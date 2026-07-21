@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "atbridge": {
+    "atbridge.ai": {
       "command": "atbridge",
       "args": ["mcp"],
       "env": {
