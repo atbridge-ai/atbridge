@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "atbridge": {
+      "command": "atbridge",
+      "args": ["mcp"],
+      "env": {
+        "ATBRIDGE_ALLOW_WRITES": "1"
+      }
+    }
+  }
+}
