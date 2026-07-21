@@ -28,7 +28,7 @@ atbridge exposes its mail / calendar / contacts / notes / tasks operations as MC
 
 Reads are enabled by default; to unlock write tools (send, reply, forward, move, delete, calendar/contact edits) add `"env": { "ATBRIDGE_ALLOW_WRITES": "1" }` and restart the client. Or let atbridge write the entry for you: `atbridge mcp setup --client claude|cursor|vscode|jetbrains|antigravity`.
 
-> **Requirements:** atbridge is a **local, Thunderbird-native** server — it talks to your running Thunderbird via a native-messaging bridge. It needs Thunderbird + the atbridge add-on installed (`atbridge bridge install`), not a remote endpoint. It is **not** a hosted/cloud server and is **not** distributed via npm/pip — install the signed binary from [atbridge.ai](https://atbridge.ai) first.
+> **Requirements:** atbridge is a **local MCP server for Thunderbird** — it talks to your running Thunderbird via a native-messaging bridge. It needs Thunderbird + the atbridge add-on installed (`atbridge bridge install`), not a remote endpoint. It is **not** a hosted/cloud server and is **not** distributed via npm/pip — install the signed binary from [atbridge.ai](https://atbridge.ai) first.
 
 Full machine-readable tool reference: [llms-mcp.txt](https://atbridge.ai/llms-mcp.txt) · CLI reference: [llms-cli.txt](https://atbridge.ai/llms-cli.txt)
 
