@@ -12,7 +12,7 @@ atbridge turns Thunderbird into one AI-driven workspace for **emails, calendars,
 - **🤖 Any AI, no lock-in.** 12 providers, including a fully private local model via Ollama (see below).
 - **🖥️ Three surfaces, one binary.** The built-in atbridge panel in Thunderbird, an MCP server for AI clients and IDEs, and a CLI for scripts and CI.
 - **📝 atbridge Notes.** A local markdown workspace with linked notes and voice memos the AI can read and write.
-- **⚡ Measurably leaner.** Because it talks to Thunderbird locally instead of proxying your mailbox through a cloud, it's **~20× faster per operation** and **3.5× cheaper per fetch** (72% fewer input tokens) than a cloud Gmail MCP bridge. [Methodology →](https://atbridge.ai/docs/architecture/why-fast-and-cheap)
+- **⚡ Measurably leaner.** Because it talks to Thunderbird locally instead of proxying your mailbox through a cloud, it's measurably faster and cheaper than a cloud Gmail MCP bridge.
 
 ## Use atbridge as an MCP server
 
@@ -50,6 +50,12 @@ irm https://atbridge.ai/install.ps1 | iex
 
 Then install the native bridge into Thunderbird: `atbridge bridge install`. Full setup guides (Claude Desktop, Cursor, and more): [atbridge.ai/docs](https://atbridge.ai/docs).
 
+## 📺 Watch
+
+- **Product demo** — [youtube.com/watch?v=EVs0ricxqjw](https://www.youtube.com/watch?v=EVs0ricxqjw)
+- **Install guides** — [macOS](https://www.youtube.com/watch?v=r2Ggzm9Sefo) · [Windows](https://www.youtube.com/watch?v=LMVsW8PuR_Q) · [Linux](https://www.youtube.com/watch?v=yDuoZgZ8Ke8)
+- **Channel** — [youtube.com/@atbridge](https://www.youtube.com/@atbridge)
+
 ## Three ways to use it
 
 - **Inside Thunderbird** — the atbridge AI Chat panel, branded HTML email compose, deterministic Skills, and atbridge Notes.
@@ -64,6 +70,7 @@ Free to start; **Personal** and **Pro** plans for power users. See [atbridge.ai/
 
 - Website — https://atbridge.ai
 - Documentation — https://atbridge.ai/docs
+- YouTube — https://www.youtube.com/@atbridge
 - LLM-readable overview — https://atbridge.ai/llms.txt
 
 ## About

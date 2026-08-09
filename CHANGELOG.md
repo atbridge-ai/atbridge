@@ -3,6 +3,22 @@
 Notable releases of atbridge — a private AI productivity suite for Thunderbird.
 See the README for what it is and how to install.
 
+## 2026-08-09 — Private voice-to-text, smarter local models & get-started videos
+
+- **Private voice-to-text, built in** — turn speech into text entirely on your own
+  machine, with no API key and no audio ever leaving your computer (Pro).
+- **More from local models** — run atbridge with a fully private local model (Ollama),
+  now including models that can help with your open email and your agenda.
+- **Smarter AI event creation** — creating events by chat is smarter and smoother.
+- **Get-started videos** — a product demo, per-OS install walkthroughs
+  (macOS / Windows / Linux), and an Ollama setup guide.
+- **Personal & Pro plans are open** — subscriptions are now available to buy, with
+  early-bird pricing.
+- **Smoother images & audio in chat** — a more polished experience when you bring an
+  image or audio clip into a conversation.
+- **Keeping pace across platforms** — ongoing platform and security updates so atbridge
+  stays reliable on macOS, Windows, and Linux (including sandboxed Linux setups).
+
 ## 2026-07-25 — Smoother setup, one-click updates & everyday polish
 
 - **Updating is now one click** — grab the latest add-on and core from Settings;
