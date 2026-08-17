@@ -14,31 +14,75 @@ atbridge turns Thunderbird into one AI-driven workspace for **emails, calendars,
 - **📝 atbridge Notes.** A local markdown workspace with linked notes and voice memos the AI can read and write.
 - **⚡ Measurably leaner.** Because it talks to Thunderbird locally instead of proxying your mailbox through a cloud, it's measurably faster and cheaper than a cloud Gmail MCP bridge.
 
-## Use atbridge as an MCP server
+## Tools
 
-atbridge exposes its mail / calendar / contacts / notes / tasks operations as MCP tools. Add it to any MCP client (Claude Desktop, Cursor, VS Code, JetBrains, Antigravity):
+60+ MCP tools across five domains, talking to your **running** Thunderbird on your own machine — nothing is proxied through a cloud. Read tools are always available; **write** tools (marked ✏️) require `ATBRIDGE_ALLOW_WRITES=1`.
 
-```json
-{
-  "mcpServers": {
-    "atbridge.ai": { "command": "atbridge", "args": ["mcp"] }
-  }
-}
-```
+**Mail**
+- `mail_list` — list recent messages in a folder, newest first (unread filter)
+- `mail_search` — search by free text and/or sender, recipient, folder, date, read state, attachments
+- `mail_get` — fetch one message (headers, body, attachment metadata)
+- `mail_thread` — fetch a whole conversation thread
+- `mail_current` — read the email the user is currently reading in Thunderbird
+- `mail_attachments` / `mail_attachment_get` — list attachments and read one (incl. local PDF/XLSX/DOCX text extraction)
+- `mail_folders` — all folders across all accounts with unread counts
+- `mail_fetch` — trigger a new-mail check now
+- `mail_send` ✏️ — compose and send a new message (or draft/template/later)
+- `mail_reply` ✏️ — reply to a message
+- `mail_forward` ✏️ — forward a message
+- `mail_compose` ✏️ — build a branded, themed HTML email from a block layout
+- `mail_draft_edit` ✏️ — edit an existing draft in place
+- `mail_mark` ✏️ — set read/star/tags (bulk-capable)
+- `mail_move` ✏️ — move messages between folders (bulk-capable)
+- `mail_delete` ✏️ — trash or hard-delete messages (bulk-capable)
+- `mail_empty_trash` ✏️ — empty an account's Trash
+- `mail_folder_create` / `mail_folder_rename` / `mail_folder_delete` ✏️ — manage folders
 
-Reads are enabled by default; to unlock write tools (send, reply, forward, move, delete, calendar/contact edits) add `"env": { "ATBRIDGE_ALLOW_WRITES": "1" }` and restart the client. Or let atbridge write the entry for you: `atbridge mcp setup --client claude|cursor|vscode|jetbrains|antigravity`.
+**Calendar**
+- `calendar_list` — list all calendars
+- `calendar_events_search` — search events in a time window across calendars
+- `calendar_events_get` — get one event by id
+- `calendar_find_slots` — find free time slots (honours events + working hours)
+- `calendar_clash_check` — check whether a proposed slot clashes
+- `calendar_settings` — working hours, working days, timezone
+- `calendar_refresh` — re-sync CalDAV/ICS calendars now
+- `calendar_events_create` ✏️ — create an event (clash-checked; attendees, recurrence)
+- `calendar_events_update` ✏️ — update an event or a single occurrence
+- `calendar_events_delete` ✏️ — delete an event or occurrence
+- `calendar_events_rsvp` ✏️ — respond to an invite (accept/decline/tentative)
 
-> **Requirements:** atbridge is a **local MCP server for Thunderbird** — it talks to your running Thunderbird via a native-messaging bridge. It needs Thunderbird + the atbridge add-on installed (`atbridge bridge install`), not a remote endpoint. It is **not** a hosted/cloud server and is **not** distributed via npm/pip — install the signed binary from [atbridge.ai](https://atbridge.ai) first.
+**Contacts**
+- `contacts_books` — list address books
+- `contacts_list` — list contacts across books
+- `contacts_search` — search across every field (name, email, phone, org, address, notes)
+- `contacts_show` — show one contact by id, email, or name
+- `contacts_duplicates` — find cards that are probably the same person
+- `contacts_lists` / `contacts_list_members` — mailing lists and their members
+- `contacts_create` / `contacts_update` / `contacts_delete` ✏️ — manage contacts
+- `contacts_list_create` / `contacts_list_delete` / `contacts_list_add` / `contacts_list_remove` ✏️ — manage mailing lists
 
-Full machine-readable tool reference: [llms-mcp.txt](https://atbridge.ai/llms-mcp.txt) · CLI reference: [llms-cli.txt](https://atbridge.ai/llms-cli.txt)
+**Notes** — a local markdown workspace
+- `notes_list` — list or full-text search saved notes
+- `notes_get` — read one note by id or title
+- `notes_save` ✏️ — save a new markdown note
+- `notes_update` ✏️ — edit a note in place
+- `notes_move` ✏️ — move or rename a note
+- `notes_delete` ✏️ — delete a note
 
-## Supported AI providers
+**Tasks**
+- `tasks_list` — list to-dos (incomplete by default)
+- `tasks_create` ✏️ — create a task (due, priority, recurrence, reminders)
+- `tasks_update` ✏️ — update a task
+- `tasks_complete` ✏️ — mark a task done (or reopen)
+- `tasks_delete` ✏️ — delete a task
 
-OpenAI · Anthropic Claude · Google Gemini · Mistral · DeepSeek · Moonshot Kimi · xAI Grok · Groq · OpenRouter · NVIDIA · any OpenAI-compatible endpoint · **Ollama** (fully local, private).
+Plus `accounts_list` and the branded-email `compose_templates*` / `compose_theme*` tools. Full machine-readable reference: [llms-mcp.txt](https://atbridge.ai/llms-mcp.txt) · CLI reference: [llms-cli.txt](https://atbridge.ai/llms-cli.txt).
 
-You can also drive the in-Thunderbird atbridge chat with an AI CLI you already have — Claude Code, OpenAI Codex, or Antigravity — using your existing subscription (BYO compute, no API key).
+## Setup
 
-## Install
+> **Requirements:** atbridge is a **local MCP server for Thunderbird** — it talks to your running Thunderbird via a native-messaging bridge, not a remote endpoint. It needs Thunderbird + the atbridge add-on, and it is **not** distributed via npm/pip. Install the signed binary from [atbridge.ai](https://atbridge.ai) first.
+
+**1. Install atbridge**
 
 ```sh
 # macOS / Linux
@@ -48,7 +92,45 @@ curl -fsSL https://atbridge.ai/install.sh | sh
 irm https://atbridge.ai/install.ps1 | iex
 ```
 
-Then install the native bridge into Thunderbird: `atbridge bridge install`. Full setup guides (Claude Desktop, Cursor, and more): [atbridge.ai/docs](https://atbridge.ai/docs).
+**2. Install the Thunderbird bridge** — connects the local server to your running Thunderbird:
+
+```sh
+atbridge bridge install
+```
+
+**3. Add atbridge to your MCP client** — let atbridge write the config for you:
+
+```sh
+atbridge mcp setup --client claude|cursor|vscode|jetbrains|antigravity
+```
+
+…or add it by hand:
+
+```json
+{
+  "mcpServers": {
+    "atbridge.ai": { "command": "atbridge", "args": ["mcp"] }
+  }
+}
+```
+
+**4. Unlock write tools (optional)** — reads work out of the box; to allow send / reply / move / delete and calendar/contact edits, add `"env": { "ATBRIDGE_ALLOW_WRITES": "1" }` to the config above and restart the client.
+
+**Setup guides** — step-by-step, per client:
+
+- [Install atbridge](https://atbridge.ai/docs/start/install/)
+- [Which connection do I need? (MCP vs CLI)](https://atbridge.ai/docs/setup/)
+- [Claude Desktop](https://atbridge.ai/docs/setup/claude-desktop/)
+- [Cursor](https://atbridge.ai/docs/setup/cursor/)
+- [JetBrains](https://atbridge.ai/docs/setup/jetbrains/)
+- [Antigravity](https://atbridge.ai/docs/setup/antigravity/)
+- [MCP reference](https://atbridge.ai/docs/reference/mcp/) · [all docs](https://atbridge.ai/docs/)
+
+## Supported AI providers
+
+OpenAI · Anthropic Claude · Google Gemini · Mistral · DeepSeek · Moonshot Kimi · xAI Grok · Groq · OpenRouter · NVIDIA · any OpenAI-compatible endpoint · **Ollama** (fully local, private).
+
+You can also drive the in-Thunderbird atbridge chat with an AI CLI you already have — Claude Code, OpenAI Codex, or Antigravity — using your existing subscription (BYO compute, no API key).
 
 ## 📺 Watch
 
