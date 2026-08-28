@@ -3,6 +3,24 @@
 Notable releases of atbridge — a private AI productivity suite for Thunderbird.
 See the README for what it is and how to install.
 
+## 2026-08-23 — Rock-solid connections, Windows fixes & signed on macOS
+
+- **Steadier AI connections** — the link between atbridge and your AI client now
+  reconnects on its own, recovers cleanly from a hiccup instead of hanging, and
+  keeps working even when atbridge updates itself underneath a running session.
+- **Windows, sorted** — voice recording now captures properly, atbridge finds your
+  AI command-line tool automatically (no manual setup), and updating no longer
+  interrupts a client that's mid-conversation.
+- **Signed & notarized on macOS** — the app is now Apple Developer ID signed and
+  notarized, so it installs without the security warning.
+- **Search inside attachments** — find mail by the text inside PDFs and documents,
+  and filter your search by attachment.
+- **Faster, sharper chat** — everyday questions get answered in a single step, you
+  see a richer at-a-glance overview, a provider is checked before it's shown as
+  connected, and there's one-click Translate on any open email.
+- **Better notes** — full heading levels, notes created right in the folder you
+  picked, formatting as you type, and richer image and link support.
+
 ## 2026-08-09 — Private voice-to-text, smarter local models & get-started videos
 
 - **Private voice-to-text, built in** — turn speech into text entirely on your own
