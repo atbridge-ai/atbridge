@@ -159,6 +159,4 @@ Free to start; **Personal** and **Pro** plans for power users. See [atbridge.ai/
 
 atbridge is a **proprietary, commercial** product distributed as signed binaries for macOS, Linux, and Windows. This repository is the product's public home and documentation; it does not contain the application source. Available in 23 UI languages.
 
-**License.** The contents of *this repository* (documentation, examples, and the health-check Dockerfile) are released under the [MIT License](LICENSE). The atbridge **application itself is proprietary** and is not covered by that license — its use is governed by the terms at https://atbridge.ai/terms.
-
-© 2026 atbridge. Questions: contact@atbridge.ai
+© 2026 atbridge. All rights reserved. Questions: contact@atbridge.ai
