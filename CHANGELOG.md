@@ -3,6 +3,25 @@
 Notable releases of atbridge — a private AI productivity suite for Thunderbird.
 See the README for what it is and how to install.
 
+## 2026-09-02 — Recurring events, clearer plan limits & smarter action items
+
+- **Recurring events, properly** — edit or delete a single occurrence of a
+  repeating event, or clear a whole date range at once. A hang on never-ending
+  series is fixed too.
+- **Clearer limits, instant upgrades** — when your AI client reaches a plan limit
+  it now says exactly what's needed and links straight to upgrade, and moving to
+  Pro takes effect immediately, with no stale lock-out.
+- **Smarter action items** — Extract Action Items now attributes each task to the
+  right person and pre-selects the ones that are yours.
+- **Your latest mail, everywhere** — "show my newest email" now spans every mailbox
+  at once, not just one account.
+- **Pick your microphone** — choose exactly which mic atbridge uses for voice.
+- **Notes the AI can add to** — the assistant can now append straight onto an
+  existing note instead of rewriting it, and it reads and writes your notes
+  faster and more efficiently.
+- **Updates that wait their turn** — atbridge finishes the operation you're running
+  before applying an update, instead of restarting mid-task.
+
 ## 2026-08-23 — Rock-solid connections, Windows fixes & signed on macOS
 
 - **Steadier AI connections** — the link between atbridge and your AI client now
