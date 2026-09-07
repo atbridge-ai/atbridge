@@ -3,6 +3,22 @@
 Notable releases of atbridge — a private AI productivity suite for Thunderbird.
 See the README for what it is and how to install.
 
+## 2026-09-07 — OpenAI's newest models & smarter draft editing
+
+- **OpenAI's newest models work again** — gpt-5.6 (luna, terra and sol) used to stop
+  with an error whenever the assistant needed to check something in your mail or
+  calendar. They now work end to end, keeping both their reasoning and their access
+  to your tools.
+- **Blend a reply into your draft, instead of stacking one on top** — while you're
+  writing an email, "Insert at Top" is now "Blend into email". It merges the
+  assistant's reply into your draft as one coherent email rather than pasting a second
+  one above it: a designed email is rebuilt as a single branded piece with your change
+  woven in, and a plain email simply gets the new wording placed where it belongs.
+  Your links, bold text and charts are preserved.
+- **It keeps up with your edits** — when you refine a draft over several messages, the
+  assistant now always works from what's actually in your compose window, so earlier
+  changes no longer get dropped.
+
 ## 2026-09-02 — Recurring events, clearer plan limits & smarter action items
 
 - **Recurring events, properly** — edit or delete a single occurrence of a
